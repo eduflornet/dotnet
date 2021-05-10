@@ -8,6 +8,7 @@ namespace NET5
         static void Main(string[] args)
         {
             //IngredientsRun.Get_Dairy_Query();
+            RecipesRun.Get_Reviews_For_RecipeName_Query();
         }
     }
 }

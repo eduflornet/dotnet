@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 
 namespace NET5.LINQ
 {
@@ -31,6 +33,10 @@ namespace NET5.LINQ
             return reviews;
         }
 
+        private static string[] names => new string[] { "Flour", "Butter", "Sugar" };
+        
+        private static int[] calories => new int[] { 100, 400, 500 };
+
         #region Recipe_Review_Join_Query
 
         public static void Get_Recipe_Review_Join_Query()
@@ -54,10 +60,11 @@ namespace NET5.LINQ
         {
             var query = from recipe in Recipes()
                 join review in Reviews() on recipe.Id equals review.RecipeId into reviewGroup
-                select new { 
+                // anonymous type
+                        select new { 
                     RecipeName = recipe.Name, 
-                    Reviews = reviewGroup
-                };
+                    Reviews = reviewGroup // collection of related reviews
+                        };
 
             foreach (var item in query)
             {
@@ -81,10 +88,19 @@ namespace NET5.LINQ
 
         #endregion
 
+        #region Ingredients_Zip
 
+        public static void Get_Ingredients_Zip()
+        {
+            IEnumerable<Ingredient> ingredients = names.Zip(calories, (name, calorie) =>
+                new Ingredient { Name = name, Calories = calorie });
+            foreach (var item in ingredients)
+            {
+                Console.WriteLine("{0} has {1} calories", item.Name, item.Calories);
+            }
+        }
 
-
-
+        #endregion
 
         private class Recipe
         {
@@ -97,5 +113,7 @@ namespace NET5.LINQ
             public int RecipeId { get; set; }
             public string ReviewText { get; set; }
         }
+
+
     }
 }

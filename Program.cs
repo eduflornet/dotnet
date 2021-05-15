@@ -7,8 +7,10 @@ namespace NET5
     {
         static void Main(string[] args)
         {
-            //IngredientsRun.Get_Dairy_Query();
-            RecipesRun.Get_Reviews_For_RecipeName_Query();
+            IngredientsRun.Get_LINQ_to_XML_Creation_by_Projection();
+            //RecipesRun.Get_Reviews_For_RecipeName_Query();
+            //RecipesRun.Get_Ingredients_Zip();
+
         }
     }
 }

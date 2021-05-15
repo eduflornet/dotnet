@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace NET5.LINQ
 {
@@ -23,15 +24,73 @@ namespace NET5.LINQ
         private static string[] CsvRecipes()
         {
             string[] list =
-                { "milk,sugar,eggs",
-                    "flour,BUTTER,eggs",
-                    "vanilla,ChEEsE,oats"
-                };
+            {
+                "milk,sugar,eggs",
+                "flour,BUTTER,eggs",
+                "vanilla,ChEEsE,oats"
+            };
             return list;
         }
 
+        #region LINQ_to_XML_Manual_Procedural_Creation
+
+        public static void Get_LINQ_to_XML_Manual_Procedural_Creation()
+        {
+            var ingredients = new XElement("ingredients");
+            var sugar = new XElement("ingredient", "Sugar");
+            var milk = new XElement("ingredient", "Milk");
+            var butter = new XElement("ingredient", "Butter");
+
+            ingredients.Add(sugar);
+            ingredients.Add(milk);
+            ingredients.Add(butter);
+
+            Console.WriteLine(ingredients);
+        }
+
+        #endregion
+
+        #region LINQ_to_XML_Functional_Construction
+
+        public static void Get_LINQ_to_XML_Functional_Construction()
+        {
+            XElement ingredients =
+                new XElement("ingredients",
+                    new XElement("ingredient", "Sugar"),
+                    new XElement("ingredient", "Milk"),
+                    new XElement("ingredient", "Butter")
+                );
+            Console.WriteLine(ingredients);
+        }
+
+        #endregion
+
+        #region LINQ_to_XML_Creation_by_Projection
+
+        public static void Get_LINQ_to_XML_Creation_by_Projection()
+        {
+            Ingredient[] ingredients =
+            {
+                new Ingredient {Name = "Sugar", Calories = 500},
+                new Ingredient {Name = "Milk", Calories = 150},
+                new Ingredient {Name = "Butter", Calories = 200}
+            };
+
+            XElement ingredientsXML =
+                new XElement("ingredients",
+                    from i in ingredients
+                    select new XElement("ingredient", i.Name,
+                        new XAttribute("calories", i.Calories))
+                );
+            Console.WriteLine(ingredientsXML);
+        }
+
+
+        #endregion
+
 
         // Case 1
+
         #region Fluent_style
 
         private static IEnumerable<string> Fluent_style_highCalorieIngredientNamesQuery()
@@ -47,15 +106,16 @@ namespace NET5.LINQ
 
         public static void Get_Fluent_style_HighCalorieIngredientNames()
         {
-            foreach (var ingredientName in Fluent_style_highCalorieIngredientNamesQuery()) Console.WriteLine(ingredientName);
+            foreach (var ingredientName in Fluent_style_highCalorieIngredientNamesQuery())
+                Console.WriteLine(ingredientName);
         }
-
-
 
         #endregion
 
         // Case 2
+
         #region Query_expression_style
+
         private static IEnumerable<string> Query_expression_style_highCalorieIngredientNames()
         {
             var list =
@@ -69,13 +129,16 @@ namespace NET5.LINQ
 
         public static void Get_Query_expression_style_HighCalorieIngredientNames()
         {
-            foreach (var ingredientName in Query_expression_style_highCalorieIngredientNames()) Console.WriteLine(ingredientName);
+            foreach (var ingredientName in Query_expression_style_highCalorieIngredientNames())
+                Console.WriteLine(ingredientName);
         }
 
         #endregion
 
         // Case 3
+
         #region Range_Variables_style
+
         private static IEnumerable<Ingredient> Range_Variables_style_highCalorieIngredientNames()
         {
             var list =
@@ -89,12 +152,14 @@ namespace NET5.LINQ
 
         public static void Get_Range_Variables_style_HighCalorieIngredientNames()
         {
-            foreach (var ingredient in Range_Variables_style_highCalorieIngredientNames()) Console.WriteLine(ingredient.Name);
+            foreach (var ingredient in Range_Variables_style_highCalorieIngredientNames())
+                Console.WriteLine(ingredient.Name);
         }
 
         #endregion
 
         // Case 4
+
         #region DairyQuery
 
         private static IEnumerable<string> DairyQuery()
@@ -104,7 +169,8 @@ namespace NET5.LINQ
                 let ingredients = csvRecipe.Split(',')
                 from ingredient in ingredients
                 let uppercaseIngredient = ingredient.ToUpper()
-                where uppercaseIngredient == "MILK" || uppercaseIngredient == "BUTTER" || uppercaseIngredient == "CHEESE"
+                where uppercaseIngredient == "MILK" || uppercaseIngredient == "BUTTER" ||
+                      uppercaseIngredient == "CHEESE"
                 select uppercaseIngredient;
 
             return dairyQuery;
@@ -112,12 +178,8 @@ namespace NET5.LINQ
 
         public static void Get_Dairy_Query()
         {
-            foreach (var dairyIngredient in DairyQuery())
-            {
-                Console.WriteLine("{0} is dairy", dairyIngredient);
-            }
+            foreach (var dairyIngredient in DairyQuery()) Console.WriteLine("{0} is dairy", dairyIngredient);
         }
-
 
         #endregion
 
@@ -127,7 +189,7 @@ namespace NET5.LINQ
         {
             var highCalDairyQuery =
                 from i in Ingredients()
-                    // anonymous type
+                // anonymous type
                 select new
                 {
                     OriginalIngredient = i,
@@ -145,15 +207,27 @@ namespace NET5.LINQ
         public static void Get_High_Cal_Dairy_Query()
         {
             foreach (var ingredient in HighCalDairyQuery())
-            {
                 Console.WriteLine("{0} - {1} ", ingredient.Name, ingredient.Calories);
-            }
         }
 
         #endregion
 
+        #region LINQ_to_XML
 
+        private static readonly string _xmlString = @"<ingredients>
+                               <ingredient>Sugar</ingredient>
+                                <ingredient>Milk</ingredient>
+                                <ingredient>Butter</ingredient>
+                                </ingredients>";
 
+        private static readonly XElement xdom = XElement.Parse(_xmlString);
+
+        public static void Get_LINQ_to_XML()
+        {
+            Console.WriteLine(xdom);
+        }
+
+        #endregion
     }
 
     internal class Ingredient

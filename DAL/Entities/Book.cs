@@ -5,6 +5,7 @@ namespace NET5.DAL.Entities
     public class Book : ISoftDelete
     {
         public int BookId { get; set; }
+        public string LocalString { get; set; }
 
         [Required] //#A
         [MaxLength(256)] //#B

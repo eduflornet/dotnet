@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace NET5.DAL.Entities
+namespace NET5.WebApi.DAL.Entities
 {
     public class LineItem : IValidatableObject //#A
     {

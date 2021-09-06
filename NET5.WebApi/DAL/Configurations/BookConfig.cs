@@ -2,14 +2,15 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NET5.DAL.Entities;
 
-namespace NET5.DAL.Configurations
+namespace NET5.WebApi.DAL.Configurations
 {
-    class BookConfig : IEntityTypeConfiguration<Book>
+    internal BookConfig : IEntityTypeConfiguration<Book>
     {
         public void Configure(EntityTypeBuilder<Book> entity)
         {
             entity.Property(p => p.PublishedOn)            //#A
                 .HasColumnType("date");                    //#A
+            entity.Property(p => p.PublishedOn).IsRequired();
 
             entity.Ignore(p => p.LocalString);
             

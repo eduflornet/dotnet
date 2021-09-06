@@ -1,4 +1,4 @@
-﻿namespace NET5.DAL.Entities
+﻿namespace NET5.WebApi.DAL.Entities
 {
     public class BookAuthor
     {

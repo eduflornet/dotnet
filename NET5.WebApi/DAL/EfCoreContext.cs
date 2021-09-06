@@ -2,7 +2,7 @@
 using NET5.DAL.Configurations;
 using NET5.DAL.Entities;
 
-namespace NET5.DAL
+namespace NET5.WebApi.DAL
 {
     class EfCoreContext: DbContext
     {

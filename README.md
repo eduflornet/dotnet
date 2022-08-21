@@ -4,8 +4,8 @@ Used tools
 - Visual Studio Code
 - Visual Studio 2022
 - C# 9
--[LINQ](https://github.com/eduflornet/NET5/tree/main/LINQ) 
--[Parallel Programming](https://github.com/eduflornet/NET5/tree/main/Parallel-Programming)
+- [LINQ](https://github.com/eduflornet/NET5/tree/main/LINQ) 
+- [Parallel Programming](https://github.com/eduflornet/NET5/tree/main/Parallel-Programming)
 
 
 ## References:

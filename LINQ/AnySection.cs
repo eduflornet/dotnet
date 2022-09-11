@@ -1,7 +1,7 @@
-﻿using System;
+﻿using NET5.LINQ.Shared;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata;
+
 
 
 namespace NET5.LINQ
@@ -27,35 +27,6 @@ namespace NET5.LINQ
         public static bool AreThereAnyBigCats(IEnumerable<Pet> pets)
         {
             return pets.Any(pet => pet.PetType == PetType.Cat && pet.Weight > 2);
-        }
-
-
-        public class Pet
-        {
-            public Pet(int id, string name, PetType petType, float weight)
-            {
-                Id = id;
-                Name = name;
-                PetType = petType;
-                Weight = weight;
-            }
-
-            public int Id { get; }
-            public string Name { get; }
-            public PetType PetType { get; }
-            public float Weight { get; }
-
-            public override string ToString()
-            {
-                return $"Id: {Id}, Name: {Name}, Type: {PetType}, Weight: {Weight}";
-            }
-        }
-
-        public enum PetType
-        {
-            Cat,
-            Dog,
-            Fish
         }
 
         #endregion

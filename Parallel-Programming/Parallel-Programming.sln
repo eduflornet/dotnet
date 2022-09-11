@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelLoopsDemo", "ParallelLoopsDemo\ParallelLoopsDemo.csproj", "{A9A68863-652C-4EE9-B0E5-3C19C527F670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakingAndStoppingDemo", "BreakingAndStoppingDemo\BreakingAndStoppingDemo.csproj", "{3C8C4035-F59D-4289-9EB4-D64E3A1F3FC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9A68863-652C-4EE9-B0E5-3C19C527F670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A68863-652C-4EE9-B0E5-3C19C527F670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A68863-652C-4EE9-B0E5-3C19C527F670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A68863-652C-4EE9-B0E5-3C19C527F670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C8C4035-F59D-4289-9EB4-D64E3A1F3FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C8C4035-F59D-4289-9EB4-D64E3A1F3FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C8C4035-F59D-4289-9EB4-D64E3A1F3FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C8C4035-F59D-4289-9EB4-D64E3A1F3FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E46B49F3-16FD-4484-B9AF-6E0CB40C4870}
+	EndGlobalSection
+EndGlobal

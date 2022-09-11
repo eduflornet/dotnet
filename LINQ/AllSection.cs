@@ -1,6 +1,8 @@
-﻿using System;
+﻿using NET5.LINQ.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+
 
 namespace NET5.LINQ
 {
@@ -52,36 +54,6 @@ namespace NET5.LINQ
                 pets.All(pet => pet.PetType == PetType.Fish);
 
         }
-
-        public class Pet
-        {
-            public int Id { get; }
-            public string Name { get; }
-            public PetType PetType { get; }
-            public float Weight { get; }
-
-            public Pet(int id, string name, PetType petType, float weight)
-            {
-                Id = id;
-                Name = name;
-                PetType = petType;
-                Weight = weight;
-            }
-
-
-            public override string ToString()
-            {
-                return $"Id: {Id}, Name: {Name}, Type: {PetType}, Weight: {Weight}";
-            }
-        }
-
-
-            public enum PetType
-            {
-                Cat,
-                Dog,
-                Fish
-            }
 
         #endregion
 

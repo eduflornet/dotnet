@@ -11,6 +11,12 @@ I have using the following tools:
 - Entity Framework Core 5 and Fluent API
 - Visual Studio 2019
 
+# NET5
+- Refreshing LINQ 
+- Applying C# 9
+- Using VSCode
+
+
 ## References:
 - [What's new in .NET 5](https://docs.microsoft.com/en-us/dotnet/core/dotnet-five)
 - [What's new in C# 9.0](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9)

@@ -1,30 +1,25 @@
-# [LINQ](https://github.com/eduflornet/NET5/tree/main/LINQ)
+# NET5
+
+## [Entity Framework Fluent API](https://github.com/eduflornet/net5.0/tree/main/NET5.WebApi/DAL)
 I have using the following tools:
-
-- C# 9
-- LINQ 
-- VSCode
-
-# [Entity Framework Fluent API](https://github.com/eduflornet/NET5/tree/main/DAL)
-I have using the following tools:
-
 - Entity Framework Core 5 and Fluent API
 - Visual Studio 2019
 
-# NET5
-- [Refreshing LINQ](https://github.com/eduflornet/NET5/tree/main/LINQ)
+
+- [Refreshing LINQ](https://github.com/eduflornet/net5.0/tree/main/LINQ)
 - Applying C# 9
 - Using VSCode
+  I have using the following tools:
+  - C# 9
+  - LINQ 
+  - VSCode
+  - Visual Studio Code
+  - Visual Studio 2022
+  - [C# 9](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9?ranMID=46128&ranEAID=wizKxmN8no4&ranSiteID=wizKxmN8no4-7DKelgyUnz3fQkRLooqOuQ&epi=wizKxmN8no4-7DKelgyUnz3fQkRLooqOuQ&irgwc=1&OCID=AID2200057_aff_7794_1243925&tduid=(ir__2misbuzmxgkfq3sbkk0sohz3wv2xqh0yw63fg12f00)(7794)(1243925)(wizKxmN8no4-7DKelgyUnz3fQkRLooqOuQ)()&irclickid=_2misbuzmxgkfq3sbkk0sohz3wv2xqh0yw63fg12f00)
+  - [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) 
 
 
-Used tools
-- Visual Studio Code
-- Visual Studio 2022
-- [C# 9](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9?ranMID=46128&ranEAID=wizKxmN8no4&ranSiteID=wizKxmN8no4-7DKelgyUnz3fQkRLooqOuQ&epi=wizKxmN8no4-7DKelgyUnz3fQkRLooqOuQ&irgwc=1&OCID=AID2200057_aff_7794_1243925&tduid=(ir__2misbuzmxgkfq3sbkk0sohz3wv2xqh0yw63fg12f00)(7794)(1243925)(wizKxmN8no4-7DKelgyUnz3fQkRLooqOuQ)()&irclickid=_2misbuzmxgkfq3sbkk0sohz3wv2xqh0yw63fg12f00)
-- [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) 
-
-
-## References:
+# References:
 - [What's new in .NET 5](https://docs.microsoft.com/en-us/dotnet/core/dotnet-five)
 - [What's new in C# 9.0](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9)
 - [Language Integrated Query (LINQ)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)

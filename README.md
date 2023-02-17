@@ -1,12 +1,12 @@
 # NET5
 
-## [Entity Framework Fluent API](https://github.com/eduflornet/net5.0/tree/main/NET5.WebApi/DAL)
+## [Entity Framework Fluent API](https://github.com/eduflornet/dotnet/tree/main/net5.0/NET5.WebApi/DAL)
 I have using the following tools:
 - Entity Framework Core 5 and Fluent API
 - Visual Studio 2019
 
 
-- [Refreshing LINQ](https://github.com/eduflornet/net5.0/tree/main/LINQ)
+- [Refreshing LINQ](https://github.com/eduflornet/dotnet/tree/main/net5.0/LINQ)
 - Applying C# 9
 - Using VSCode
   I have using the following tools:
@@ -19,7 +19,7 @@ I have using the following tools:
   - [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) 
 
 
-# References:
+# References
 - [What's new in .NET 5](https://docs.microsoft.com/en-us/dotnet/core/dotnet-five)
 - [What's new in C# 9.0](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9)
 - [Language Integrated Query (LINQ)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)
